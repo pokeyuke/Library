@@ -8,17 +8,35 @@
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Orbitron:wght@400..900&family=Playwrite+CA:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="header">Welcome to my Library!</div>
     <div class="main" id="main">
          <div class="library-container">
-        <input type="button" id="add-book" > <label for="add-book">Click me to add a book!</label>
-      
-         </div> 
-</div>
+        <input type="button" id="add-book" > <label for="add-book">Click me to show the books!</label>
+
+
+        
+            <div class="wrapper">
+                <dialog id="new-book">
+                    <h2>Add a new book</h2>
+                    <form id="book-form">
+                        <input type="text" >
+                        <input type="text" >
+                        <input type="text" >
+                        <div class="buttons">
+                            <button>submit</button>
+                            <button id="cancel" type="button">cancel</button>
+                        </div>
+                        
+                    </form>
+                </dialog>
+                <button id="trigger">Add a new book!</button>
+            </div>
+        </div> 
+    </div>
     
 </body>
 </html>

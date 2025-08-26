@@ -1,8 +1,15 @@
 const myLibrary = [];
-const btn = document.getElementById("add-book")
+const showBtn = document.getElementById("add-book")
 const main = document.getElementById("main")
+const trigger = document.getElementById("trigger")
+const cancel = document.getElementById("cancel")
+const dialog = document.getElementById("new-book")
+const wrapper = document.querySelector(".wrapper")
 
-btn.addEventListener("click", bookDisplay)
+trigger.addEventListener("click", () => showLoginDialog(true))
+cancel.addEventListener("click", () => showLoginDialog(false))
+
+showBtn.addEventListener("click", bookDisplay)
 
 function Book(title, author, pages, read){
 
@@ -44,7 +51,11 @@ function bookDisplay(){
             <p>Pages: ${book.pages}</p>
             <p>Status: ${book.read ? 'Read' : 'Not Read'}</p>
         `;
+        bookCard.classList.add("cards")
         main.appendChild(bookCard); 
     });
-
 }
+
+const showLoginDialog = (show) => show ? dialog.showModal() : dialog.close()
+
+dialog.addEventListener("click", (e) => !wrapper.contains(e.target) && dialog.close())
