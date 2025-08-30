@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Orbitron:wght@400..900&family=Playwrite+CA:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Orbitron:wght@400..900&family=Playwrite+CA:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
+  <div class="header">Welcome to my Library!</div>
 
-    <div class="header">Welcome to my Library!</div>
-    <div class="main" id="main">
-         <div class="library-container">
-        <input type="button" id="add-book" > <label for="add-book">Click me to show the books!</label>
+  <div class="library-container">
+  
+   <input type="button" id="add-book" value="Show Books">
 
-
-        
-            <div class="wrapper">
-                <dialog id="new-book">
-                    <h2>Add a new book</h2>
-                    <form id="book-form">
-                        <input type="text" >
-                        <input type="text" >
-                        <input type="text" >
-                        <div class="buttons">
-                            <button>submit</button>
-                            <button id="cancel" type="button">cancel</button>
-                        </div>
-                        
-                    </form>
-                </dialog>
-                <button id="trigger">Add a new book!</button>
-            </div>
-        </div> 
+    <div class="wrapper">
+      <button id="trigger">Add a new book!</button>
+      <dialog id="new-book">
+        <h2>Add a new book</h2>
+        <form id="book-form">
+          <label>Title</label>
+          <input type="text" name="title" />
+          <label>Author</label>
+          <input type="text" name="author" />
+          <label>Pages</label>
+          <input type="text" name="pages" />
+          <label>Read?</label>
+          <input type="checkbox" name="read" />
+          <div class="buttons">
+            <button type="submit">Submit</button>
+            <button id="cancel" type="button">Cancel</button>
+          </div>
+        </form>
+      </dialog>
     </div>
-    
+
+  
+    <div class="main" id="main"></div>
+  </div>
 </body>
 </html>
